@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Finalz</title>
+        <!-- We've provided some styles for you, aren't we nice? -->
+        <link rel="stylesheet" type="text/css" href="./css/reset.css" />
+        <link rel="stylesheet" type="text/css" href="./css/style.css" />
+         <script src="angular.js"></script>
+         <script src="app.js"></script>
+    </head>
+    <body ng-app="final" ng-controller="MainController">
+        <h1> Angular Final Test </h1>
+        <a href="./about">About me :D</a> <br><br>
+        <ul>
+            <div ng-repeat= "homework in homeworks" ng-click='showMe=true'>
+                {{homework.assignment}}
+                <div ng-show="showMe">
+                    Url: <a href="{{homework.url}}">{{homework.url}}</a></br>
+                    Status: {{homework.status}} <br><br>
+                </div>
+            </div>
+        </ul>
+
+    
+    </body>
